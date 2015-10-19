@@ -74,6 +74,12 @@ public class RandomGenerator {
 			return holder+10;
 		return holder;
 	}
+	public static int round10Improv(int n){
+		if(n%10<5)
+			return n-n%10;
+		else
+			return n+(10-n%10);
+	}
 
 
 	// return the sum of the rounded values of a,b, and c
