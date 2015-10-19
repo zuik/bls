@@ -13,7 +13,7 @@ public class RandomGenerator {
 	public static int randomEven(int n) {
 		int counter = 0;
 		for(int i = 0; i < 10; i++){
-			int x = (int) (n*Math.random());
+			int x = (int) ((n+1)*Math.random());
 			System.out.println(x);
 			if (x%2==0){
 				counter++;
