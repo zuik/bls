@@ -13,7 +13,7 @@ public class RandomGenerator {
 	public static int randomEven(int n) {
 		int counter = 0;
 		for(int i = 0; i < 10; i++){
-			int x = (int) (n*Math.random());
+			int x = (int) ((n+1)*Math.random());
 			System.out.println(x);
 			if (x%2==0){
 				counter++;
@@ -73,6 +73,12 @@ public class RandomGenerator {
 		if(countStep>=5)
 			return holder+10;
 		return holder;
+	}
+	public static int round10Improv(int n){
+		if(n%10<5)
+			return n-n%10;
+		else
+			return n+(10-n%10);
 	}
 
 

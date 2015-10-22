@@ -24,8 +24,6 @@ public class StringProblem{
 // "cat" and "dog".
 // Must Use countWords!!
   public static boolean catDog(String str){
-    if (countWords(str,"cat")==countWords(str,"dog"))
-      return true;
-    return false;
+    return countWords(str,"cat")==countWords(str,"dog");
   }
 }
