@@ -4,8 +4,8 @@ public class WeekendProgProb{
     //System.out.println(twoConsecutive(1,2,12));
     //System.out.println(twoConsecutive(1,3,5));
     fourHeads();
-    nHeads(2);
-    nHeads(5);
+    //nHeads(2);
+    //nHeads(5);
     //System.out.print("asdfhashasfd ".contains("has"));
   }
   public static boolean twoConsecutive(int a, int b, int c){
@@ -17,6 +17,30 @@ public class WeekendProgProb{
     } else{
       return("T ");
     }
+  }
+  public static void fourHeads(){
+    int count = 0;
+    while (count<4){
+      String dummy = coinFlip();
+      System.out.print(dummy);
+      if(dummy =="H ")
+        count++;
+      else
+        count = 0;
+    }
+    System.out.println("\n Your sequence has had 4 heads");
+  }
+  public static void nHeads(int n){
+    int count = 0;
+    while (count<n){
+      String dummy = coinFlip();
+      System.out.print(dummy);
+      if(dummy =="H ")
+        count++;
+      else
+        count = 0;
+    }
+    System.out.println("\n Your sequence has had "+ n +" heads");
   }
   /* Below is a complicated version of what should be simple
   public static void fourHeads(){
