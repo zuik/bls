@@ -3,9 +3,10 @@ public class WeekendProgProb{
     //System.out.println(twoConsecutive(1,2,2));
     //System.out.println(twoConsecutive(1,2,12));
     //System.out.println(twoConsecutive(1,3,5));
-    fourHeads();
+    //fourHeads();
     //nHeads(2);
-    //nHeads(5);
+    int howMuch = Integer.parseInt(ag[0]);
+    nHeads(howMuch);
     //System.out.print("asdfhashasfd ".contains("has"));
   }
   public static boolean twoConsecutive(int a, int b, int c){
@@ -34,7 +35,7 @@ public class WeekendProgProb{
     int count = 0;
     while (count<n){
       String dummy = coinFlip();
-      System.out.print(dummy);
+      //System.out.print(dummy);
       if(dummy =="H ")
         count++;
       else
