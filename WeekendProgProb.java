@@ -5,9 +5,10 @@ public class WeekendProgProb{
     //System.out.println(twoConsecutive(1,3,5));
     //fourHeads();
     //nHeads(2);
-    int howMuch = Integer.parseInt(ag[0]);
-    nHeads(howMuch);
+    //int howMuch = Integer.parseInt(ag[0]);
+    //nHeads(howMuch);
     //System.out.print("asdfhashasfd ".contains("has"));
+    printTwoDigit(50);
   }
   public static boolean twoConsecutive(int a, int b, int c){
     return Math.abs(a-b)==1 || Math.abs(a-c)==1 || Math.abs(c-b)==1;
@@ -42,6 +43,20 @@ public class WeekendProgProb{
         count = 0;
     }
     System.out.println("\n Your sequence has had "+ n +" heads");
+  }
+  public static void printTwoDigit(int n){
+    boolean fourtyTwo = false;
+    for(int i=0; i<n; i++){
+      int num = (int) (90*Math.random())+10;
+      System.out.println("next = " + num);
+      if(num==42){
+        fourtyTwo=true;
+      }
+    }
+    if (fourtyTwo)
+      System.out.println("We saw a 42!");
+    else
+      System.out.println("No 42 was seen.");
   }
   /* Below is a complicated version of what should be simple
   public static void fourHeads(){
