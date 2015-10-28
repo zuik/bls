@@ -10,10 +10,11 @@ public class WeekendProgProb {
 		//int howMuch = Integer.parseInt(ag[0]);
 		//nHeads(howMuch);
 		//System.out.print("asdfhashasfd ".contains("has"));
-		Scanner console = new Scanner(System. in );
+		//Scanner console = new Scanner(System. in );
 		//printTwoDigit(50);
 		//favoriteLetter(console, "a");
-		favoriteLetter(console, "z");
+		//favoriteLetter(console, "z");
+		randomRects();
 	}
 	public static boolean twoConsecutive(int a, int b, int c) {
 		return Math.abs(a - b) == 1 || Math.abs(a - c) == 1 || Math.abs(c - b) == 1;
@@ -70,6 +71,23 @@ public class WeekendProgProb {
 			if (holder.indexOf(x) == 0) ctr++;
 			else ctr = 0;
 			if (ctr == 2) System.out.println(clearOut + "Terminated at:" + holder + "/" + x);
+		}
+	}
+	public static void randomRects(){
+		int prevArea = 0;
+		int counter = 0;
+		while(counter<4){
+			int wid = (int) (10*Math.random())+1;
+			int hei = (int) (10*Math.random())+1;
+			int rectArea = wid*hei;
+			System.out.println("w: "+ wid+" h: "+hei+" a: "+ rectArea);
+			if (prevArea < rectArea){
+				counter ++;
+				//System.out.println(counter);
+				prevArea = rectArea;
+			} else
+				counter = 0;
+				prevArea = rectArea;
 		}
 	}
 	/* Below is a complicated version of what should be simple
