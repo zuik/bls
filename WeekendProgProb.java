@@ -14,7 +14,11 @@ public class WeekendProgProb {
 		//printTwoDigit(50);
 		//favoriteLetter(console, "a");
 		//favoriteLetter(console, "z");
-		randomRects();
+		//randomRects();
+		//lucky(5);
+		printChar("I love yogurt");
+		//System.out.println(isVowel("a"));
+		//System.out.println(isVowel("b"));
 	}
 	public static boolean twoConsecutive(int a, int b, int c) {
 		return Math.abs(a - b) == 1 || Math.abs(a - c) == 1 || Math.abs(c - b) == 1;
@@ -73,6 +77,22 @@ public class WeekendProgProb {
 			if (ctr == 2) System.out.println(clearOut + "Terminated at:" + holder + "/" + x);
 		}
 	}
+	public static void lucky(int n){
+		int counter = 4;
+		int howMany = 0;
+		while (counter>0){
+			int rand = (int) (6*Math.random())+1;
+			if (rand <= n){
+				counter --;
+				System.out.print((char) 27 + "[31m");
+			} else
+				counter =4;
+			howMany++;
+			System.out.print(rand+" ");
+			System.out.print((char) 27 + "[0m");
+		}
+		System.out.println("\nFinished after "+ howMany + " rolls.");
+	}
 	public static void randomRects(){
 		int prevArea = 0;
 		int counter = 0;
@@ -89,6 +109,25 @@ public class WeekendProgProb {
 				counter = 0;
 				prevArea = rectArea;
 		}
+	}
+	public static void printChar(String x){
+		int counter = 0;
+		// Compare each character, one by one
+		for(int i=0; i<x.length(); i++){
+			if(isVowel(x.substring(i,i+1)))
+				counter ++;
+		}
+		System.out.println(counter);
+	}
+	public static boolean isVowel(String y){
+		return (y.equalsIgnoreCase("a") ||
+			y.equalsIgnoreCase("e") ||
+			y.equalsIgnoreCase("i") ||
+			y.equalsIgnoreCase("o") ||
+			y.equalsIgnoreCase("u") );
+	}
+	public static String replace(String og, String what, String withWhat){
+
 	}
 	/* Below is a complicated version of what should be simple
   public static void fourHeads(){
