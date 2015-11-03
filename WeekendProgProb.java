@@ -127,7 +127,9 @@ public class WeekendProgProb {
 			y.equalsIgnoreCase("u") );
 	}
 	public static String replace(String og, String what, String withWhat){
-
+    		while(og.indexOf(what)!=-1)
+			og = og.substring(0, og.indexOf(what)) + withW + og.substring(og.indexOf(what)+what.length());
+		return og;
 	}
 	/* Below is a complicated version of what should be simple
   public static void fourHeads(){
