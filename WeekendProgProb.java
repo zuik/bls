@@ -16,9 +16,10 @@ public class WeekendProgProb {
 		//favoriteLetter(console, "z");
 		//randomRects();
 		//lucky(5);
-		printChar("I love yogurt");
-		//System.out.println(isVowel("a"));
-		//System.out.println(isVowel("b"));
+		//System.out.println(replace("I love yogurt", "love", "hates"));
+		//System.out.println(changeSpace("I love yogurt", "*"));
+		System.out.println(isVowel("a"));
+		System.out.println(isVowel("b"));
 	}
 	public static boolean twoConsecutive(int a, int b, int c) {
 		return Math.abs(a - b) == 1 || Math.abs(a - c) == 1 || Math.abs(c - b) == 1;
@@ -120,16 +121,15 @@ public class WeekendProgProb {
 		System.out.println(counter);
 	}
 	public static boolean isVowel(String y){
-		return (y.equalsIgnoreCase("a") ||
-			y.equalsIgnoreCase("e") ||
-			y.equalsIgnoreCase("i") ||
-			y.equalsIgnoreCase("o") ||
-			y.equalsIgnoreCase("u") );
+		return ("aeiou".indexOf(y)!=-1);
 	}
 	public static String replace(String og, String what, String withWhat){
-    		while(og.indexOf(what)!=-1)
-			og = og.substring(0, og.indexOf(what)) + withW + og.substring(og.indexOf(what)+what.length());
+    while(og.indexOf(what)!=-1)
+			og = og.substring(0, og.indexOf(what)) + withWhat + og.substring(og.indexOf(what)+what.length());
 		return og;
+	}
+	public static String changeSpace(String og, String withWhat){
+		return replace(og, " ", withWhat);
 	}
 	/* Below is a complicated version of what should be simple
   public static void fourHeads(){
