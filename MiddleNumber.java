@@ -3,7 +3,6 @@ public class MiddleNumber{
     System.out.println(median(1,2,3));
   }
   public static int median(int a, int b, int c){
-    if (a<b && a>c) return a;
-    else return median(b,c,a);
+    return (a<b & a>c)?a:median(b,c,a);
   }
 }

@@ -124,7 +124,7 @@ public class WeekendProgProb {
 		return ("aeiou".indexOf(y)!=-1);
 	}
 	public static String replace(String og, String what, String withWhat){
-    while(og.indexOf(what)!=-1)
+		while(og.indexOf(what)!=-1)
 			og = og.substring(0, og.indexOf(what)) + withWhat + og.substring(og.indexOf(what)+what.length());
 		return og;
 	}
