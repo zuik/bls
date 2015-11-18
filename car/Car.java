@@ -32,6 +32,9 @@ public class Car{
     System.out.println("totalDist: "+ totalDist);
     System.out.println("isBroken: "+ isBroken);
   }
+  public String toString(){
+    return this.makeModel;
+  }
   public double getPosition(){
     return position;
   }
@@ -44,13 +47,16 @@ public class Car{
   public boolean getIsBroken(){
     return isBroken;
   }
-  public double getNumCars(){
+  public int getNumCars(){
     return numCars;
   }
   public void drive(double howMuch){
     if (this.isBroken)
-      throw new IllegalArgumentException("This car of id "+this.numCars+ " is broken");
+      throw new IllegalArgumentException("This car "+this+ " is broken");
     position += howMuch;
     totalDist += Math.abs(howMuch);
   }
+  //public print(String x){
+  //  System.out.println(x);
+  //}
 }
