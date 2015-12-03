@@ -1,34 +1,32 @@
-//Name: Duy Nguyen
-public class Gambler{
-  String name;
-  double balance;
-  boolean isHouse;
-  int gameWon = 0;
-  int win, tol;
+//Name:
+public class Roulette{
+	private int pocket;
+	public static int numOfGames=0;
 
-  public Gambler(String name, double balance, boolean isHouse){
-    this.name = name;
-    this.balance = balance;
-    this.isHouse = isHouse;
-  }
-  public String toString(){
-    return this.name;
-  }
-  //current player wins the game
-  //update their balance total
-  public void winGame(){
-    this.balance += 12.0;
-    this.gameWon ++;
-    tol ++;
-    win ++;
-    //System.out.println(this+" won. His current balance is: " + this.balance);
-  }
+	public Roulette(){
 
-  //current player loses the game
-  //update their balance total
-  public void loseGame(){
-    this.balance -= 1.0;
-    tol ++;
-    //System.out.println(this+" lost. His current balance is: " + this.balance);
-  }
+	}
+
+	// Spin the roulette by
+	//generating random number integer from 0-37 inclusive and
+	//updating pocket and numOfGames.
+	public void spin(){
+
+	}
+
+	public static void printWelcome(){
+		System.out.println("Welcome to BetOnGreen,");
+		System.out.print("the game where you can bet on any color as long as ");
+		System.out.print("it is green.");
+	}
+
+
+	//determine who wins the game
+	//prints out name of winner.
+	public static void winner(Gambler a, Gambler b){
+
+	}
+
+
+
 }
