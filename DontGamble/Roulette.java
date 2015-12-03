@@ -1,4 +1,4 @@
-//Name:
+//Name: Duy Nguyen
 //Roulette is a game, you spin until one person loses all the money
 public class Roulette{
   private int pocket;

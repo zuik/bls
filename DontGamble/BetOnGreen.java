@@ -6,6 +6,7 @@
  * Simulate one match between a player and the house.
  * Player will always bet $1 on Green.
  * Player wins $12 if ball lands on Green.
+ * This 12 dollar came from the host, and host won $1 if we lost
  * Player loses $1 if ball lands on either Red or Black.
  * Both the house and the player starts out with $50.
  * Match ends when the player or the house lost all of his money.
@@ -24,14 +25,15 @@ public class BetOnGreen{
     Gambler player=new Gambler("Mike",50,false);
     Gambler house=new Gambler("Foxwoods",50,true);
     Roulette g = new Roulette();
-
+    int matchWin = 0;
     //print welcoming screen from Roulette class.
     Roulette.printWelcome();
 
     //play the match
-    for(int i =0; i<1000000; i++){
+    for(int i =0; i<100; i++){
       g.playMatch(player, house);
-      //System.out.print("Winner of match "+(i+1)+" is: " + g.playMatch(player, house));
+      System.out.println("Winner of match "+(i+1)+" is: " + g.playMatch(player, house));
+      matchWin++;
       //System.out.println(" After match "+(i+1)+", player record is: Win - "+player.win +
       //" Lost - " + (player.tol-player.win));
       total += player.tol;
@@ -41,6 +43,7 @@ public class BetOnGreen{
       house=new Gambler("Foxwoods",50,true);
     }
     System.out.println("So in the end, the player win "+String.valueOf(win/total*100.0).substring(0,4)+"% of " +total +" games. That's why you don't gamble!");
+    System.out.println("Match wined: "+ matchWin)
     //prints out the name of the winner of the match
     //and the number of games. Must call winner method.
 
