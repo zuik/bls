@@ -24,6 +24,8 @@ public class Gambler{
 		this.numGameWon+=1;
 		//System.out.print("\n");
 		//System.out.printf("\n%s won this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost);
+		//if (!this.isHouse)
+		//System.out.print(this +" ");
 	}
 	//current player loses the game
 	//update their balance total
