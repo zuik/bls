@@ -29,7 +29,7 @@ public class BetOnGreen{
 		Roulette.printWelcome();
 
 		//play the match
-		g.playMatch(player, house);
+		System.out.printf("Match #1 winner: %s",g.playMatch(player, house));
 
 
 		//prints out the name of the winner of the match

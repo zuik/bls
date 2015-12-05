@@ -21,7 +21,7 @@ public class Gambler{
 			this.balance += 1.0;
 		this.balance += 12.0;
 		this.numGameWon+=1;
-		System.out.printf("%s won this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost)
+		System.out.printf("%s won this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost);
 	}
 	//current player loses the game
 	//update their balance total
@@ -30,9 +30,9 @@ public class Gambler{
 			this.balance -= 12.0;
 		this.balance += 1;
 		this.numGameLost+=1;
-		System.out.printf("%s lost this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost)
+		System.out.printf("%s lost this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost);
 	}
 	public boolean isSolvent(){
-		return (this.balance >= 0)
+		return (this.balance >= 0);
 	}
 }
