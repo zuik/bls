@@ -31,6 +31,9 @@ public class BetOnGreen{
 		//play the match
 		for(int i=0; i<100; i++){
 		System.out.printf("\nMatch #%d winner: %s",i+1 ,g.playMatch(player, house));
+		System.out.printf("\nPlayer: %d/%d. House: %d/%d",
+		player.numGameWon, player.numGameWon+player.numGameLost,
+		house.numGameWon, house.numGameWon+house.numGameLost);
 		//System.out.printf("\nMatch #1 winner: %s, Ratio:", Roulette.winner(player, house));
 
 }
