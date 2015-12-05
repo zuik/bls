@@ -19,20 +19,27 @@ public class Gambler{
 	public void winGame(){
 		if (this.isHouse)
 			this.balance += 1.0;
-		this.balance += 12.0;
+		else
+			this.balance += 12.0;
 		this.numGameWon+=1;
-		System.out.printf("%s won this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost);
+		//System.out.print("\n");
+		//System.out.printf("\n%s won this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost);
 	}
 	//current player loses the game
 	//update their balance total
 	public void loseGame(){
 		if (this.isHouse)
 			this.balance -= 12.0;
-		this.balance += 1;
+		else
+			this.balance -= 1;
 		this.numGameLost+=1;
-		System.out.printf("%s lost this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost);
+		//System.out.print("\n");
+		//System.out.printf("\n%s lost this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost);
 	}
 	public boolean isSolvent(){
 		return (this.balance >= 0);
+	}
+	public void reset(double balance){
+		this.balance = balance;
 	}
 }

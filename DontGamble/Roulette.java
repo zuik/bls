@@ -37,12 +37,14 @@ public class Roulette{
 	//determine who wins the game
 	//prints out name of winner.
 	public static Gambler winner(Gambler player, Gambler house){
-		if(player.isSolvent())
+		if(player.isSolvent()){
+			player.reset(50);
+			house.reset(50);
 			return player;
-		else
+		} else {
+			player.reset(50);
+			house.reset(50);
 			return house;
+		}
 	}
-
-
-
 }

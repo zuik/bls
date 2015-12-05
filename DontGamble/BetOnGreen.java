@@ -29,9 +29,11 @@ public class BetOnGreen{
 		Roulette.printWelcome();
 
 		//play the match
-		System.out.printf("Match #1 winner: %s",g.playMatch(player, house));
+		for(int i=0; i<100; i++){
+		System.out.printf("\nMatch #%d winner: %s",i+1 ,g.playMatch(player, house));
+		//System.out.printf("\nMatch #1 winner: %s, Ratio:", Roulette.winner(player, house));
 
-
+}
 		//prints out the name of the winner of the match
 		//and the number of games. Must call winner method.
 
