@@ -28,9 +28,8 @@ public class BetOnGreen{
 		//print welcoming screen from Roulette class.
 		Roulette.printWelcome();
 
-
 		//play the match
-
+		g.playMatch(player, house);
 
 
 		//prints out the name of the winner of the match

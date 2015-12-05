@@ -1,32 +1,38 @@
-//Name:
-public class Roulette{
-	private int pocket;
-	public static int numOfGames=0;
+//Name: Duy Nguyen
+public class Gambler{
+	String name;
+	private double balance;
+	boolean isHouse;
+	int numGameWon;
+	int numGameLost;
 
-	public Roulette(){
-
+	public Gambler(String name, double balance, boolean isHouse){
+		this.name = name;
+		this.balance = balance;
+		this.isHouse = isHouse;
 	}
-
-	// Spin the roulette by
-	//generating random number integer from 0-37 inclusive and
-	//updating pocket and numOfGames.
-	public void spin(){
-
+	public String toString() {
+		return this.name;
 	}
-
-	public static void printWelcome(){
-		System.out.println("Welcome to BetOnGreen,");
-		System.out.print("the game where you can bet on any color as long as ");
-		System.out.print("it is green.");
+	//current player wins the game
+	//update their balance total
+	public void winGame(){
+		if (this.isHouse)
+			this.balance += 1.0;
+		this.balance += 12.0;
+		this.numGameWon+=1;
+		System.out.printf("%s won this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost)
 	}
-
-
-	//determine who wins the game
-	//prints out name of winner.
-	public static void winner(Gambler a, Gambler b){
-
+	//current player loses the game
+	//update their balance total
+	public void loseGame(){
+		if (this.isHouse)
+			this.balance -= 12.0;
+		this.balance += 1;
+		this.numGameLost+=1;
+		System.out.printf("%s lost this game. His balance: %f. Win/lost: %d/%d",this,this.balance,this.numGameWon,this.numGameLost)
 	}
-
-
-
+	public boolean isSolvent(){
+		return (this.balance >= 0)
+	}
 }
