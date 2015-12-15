@@ -10,10 +10,10 @@ public class WeekendProgProb {
 		//int howMuch = Integer.parseInt(ag[0]);
 		//nHeads(howMuch);
 		//System.out.print("asdfhashasfd ".contains("has"));
-		//Scanner console = new Scanner(System. in );
+		Scanner console = new Scanner(System. in );
 		//printTwoDigit(50);
 		//favoriteLetter(console, "a");
-		//favoriteLetter(console, "z");
+		favoriteLetter(console, "z");
 		//randomRects();
 		//lucky(5);
 		//System.out.println(replace("I love yogurt", "love", "hates"));
