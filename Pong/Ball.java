@@ -8,7 +8,8 @@ public class Ball extends Sprite implements Movable{
 		this.radius = r;
 	}
 	public void move() {
-
+		this.x += v_x;
+		this.y += v_y;
 	}	
 	public int getRadius() {
 		return this.radius;
