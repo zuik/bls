@@ -13,3 +13,6 @@ hs_err_pid*
 
 #Stupid Mac
 *.DS_Store
+
+#IDEA
+.idea/
