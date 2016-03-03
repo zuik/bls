@@ -19,9 +19,9 @@ public class Paddle extends Sprite {
   public int getHeight() {
     return h;
   }*/
-  public void move() {
+  public void move(int y) {
     //this.x = mouseX;
-    this.y = mouseY;
+    this.y = y;
   }
   public void changeWidth(int w){
     this.w = w;
